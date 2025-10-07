@@ -1,0 +1,13 @@
+cfr784a    - verificar o limite de cada divisao e printa a resposta
+cfr964a    - verifica se o tamanho do numero (num) é 1 ou 2 usando num/10 (divide por 10). Caso num/10 seja igual a 0, o numero tem tamanho 1 e voce printa ele mesmo. Caso contrario, voce printa a soma de num/10 e num%10
+cfr835a    - verifica as condicoes, caso o numero for maior e menor que cada um dos outros numeros, printa o numero
+cfr827a    - verifica a condição se o numero atual é a soma dos outros dois. Armazena cada um em uma variavel e é possive fazer tres if’s pra cada caso, caso haja algum verdadeiro printa YES
+cfr849a    - verificar se o char atual está na string “codeforces”, ou seja, pra cada char que voce passar voce verifica se esse char é igual ‘c’, ‘o’, ‘d’, etc…
+cfg105321f - é só implementar o que ele pede
+cfr377a    - "brutar" a resposta (entre 1 e 10)
+cfr981a    - Só simular as jogadas
+cfr911a    - se tem um segmento de tamanho >= 3, a resposta é 2 porque dá para gerar água infinita à la minecraft. senão é o número de '.'
+cfr548b    - Itera de trás para frente diminuindo o tanto que pode pegar
+
+AULA
+cfr980a    - Separar o problema em a, b que sempre dá, e quando precisa retirar algum valor x
