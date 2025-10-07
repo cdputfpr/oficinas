@@ -1,0 +1,8 @@
+cfr937d4a  - https://codeforces.com/contest/1950/problem/A
+cfr993d4a  - https://codeforces.com/contest/2044/problem/A
+cfr1017d4a - https://codeforces.com/contest/2094/problem/A
+cfr1047d3a - https://codeforces.com/contest/2137/problem/A
+cfr1037d3a - https://codeforces.com/contest/2126/problem/A
+cfr1050d4a - https://codeforces.com/contest/2148/problem/A
+cfr101d2a  - https://codeforces.com/contest/141/problem/A
+cfr628d2a  - https://codeforces.com/contest/1325/problem/A
