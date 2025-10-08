@@ -1,8 +1,0 @@
-cfr937d4a  - 
-cfr993d4a  - 
-cfr1017d4a - 
-cfr1047d3a - 
-cfr1037d3a - 
-cfr1050d4a - Se n é par a resposta é x senão 0
-cfr101d2a  - Vetor de frequência de caracteres
-cfr628d2a  - 
