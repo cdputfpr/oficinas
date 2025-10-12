@@ -1,0 +1,103 @@
+\documentclass{article}
+
+% Header content
+\title{Cheatsheet das Oficinas Introdutórias}
+\author{Clube de Programação da UTFPR}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{codegray},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle, upquote=true}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Cabeçalho Padrão}
+\begin{lstlisting}[language=C++]
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    return 0;
+}
+\end{lstlisting}
+
+\section{Comandos básicos}
+Comandos básicos de linux: 
+\begin{itemize}
+    \item \textbf{ls}: lista os arquivos do diretório
+    \item \textbf{cd [caminho]}: muda de diretório para o caminho especificado
+\end{itemize}
+
+Comandos para compilar e rodar o código em C++:
+
+Estando no diretório do arquivo de código, usamos \textbf{g++ \{nome\_do\_arquivo\}}, que gererá um executável chamado \textbf{a.out}.
+Depois executamos o código usando \textbf{./a.out}.
+Lembrar que em alguns terminais o atalho para colar da clipboard é \textbf{Ctrl + Shift + V}
+
+\section{Input/Output de variáveis}
+\begin{lstlisting}
+int n;
+long long a;
+double b; // nao usar float
+string s;
+
+cin >> n >> a >> b >> s;
+cout << n << '\n';
+\end{lstlisting}
+Lembrar que streams devem respeitar os tipos:
+
+Exemplo:
+\begin{lstlisting}[language=C++]
+int a = 1;
+cout << a + '\n'; // estamos imprimindo a soma de um int com um char
+cout << a + "\n"; // estamos somando um int com uma string (errado)
+cout << a << '\n'; // jeito correto de imprimir com nova linha
+\end{lstlisting}
+
+Cuidar com \textquotesingle0\textquotesingle\  e "0".
+\begin{itemize}
+    \item \textquotesingle0\textquotesingle\ é um char, ou seja, um inteiro de 8 bits.
+    \item "0" é uma string que possui os caracteres \textquotesingle0\textquotesingle\ e o \textquotesingle\textbackslash0\textquotesingle\ (mais disso nas próximas aulas).
+\end{itemize}
+
+Retornar sempre as respostas da forma que tiver no enunciado.
+
+\section{Vetores}
+\begin{lstlisting}[language=C++]
+vector<int> a = vector<int>(n);
+vector<double> b = vector<double>(n);   
+vector<string> c = vector<string>(n); // mais nas proximas aulas
+for(int i = 0; i < n; i++){
+    cin >> a[i];
+}
+\end{lstlisting}
+
+\end{document}
