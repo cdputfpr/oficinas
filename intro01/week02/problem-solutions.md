@@ -14,3 +14,9 @@ Faz um for aninhado pelo tamanho e preenche a matriz com as seguintes condiçõe
 - Se o valor de j for maior que 0 e divisível por 2, troca o curr_ch
 - Atribui curr_ch para a posição (i, j)
 No final, percorre a matriz e printa (i, j).
+
+**cf1915b**
+Inicializa uma matrix e um vetor de frequências, encontra a linha onde está o ? e encontra pelo vetor de frequências na linha qual caracter está faltando. 
+
+**cf1915d**
+Itera na string e adiciona um ponto antes caso a_i seja consoante e a_{i+1} seja vogal, e não seja a primeira iteração

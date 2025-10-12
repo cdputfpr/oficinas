@@ -32,9 +32,11 @@ Apenas para a última linha, o símbolo \\ não será escrito. Lembrar de deixar
 ### problem-solutions.md
 Arquivo onde terão as soluções escritas dos problemas do arquivo *problem-codes.md*. Os problemas devem estar em mesma ordem do outro arquivo e devem ter a seguinte forma:
 
-**\*\*[código_do_problema]:\*\* [solução_escrita]** \
+```
+\*\*[código_do_problema]:\*\* 
 
-Apenas para a última linha, o símbolo \\ não será escrito. Lembrar de deixar uma linha vazia ao final do arquivo.
+[solução_escrita]
+```
 
 ### Diretório: solutions
 Esse diretório é destinado para conter uma a duas soluções por problema da oficina.
