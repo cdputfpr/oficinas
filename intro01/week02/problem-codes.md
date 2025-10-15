@@ -3,3 +3,4 @@
 **cf1950b:**   https://codeforces.com/contest/1950/problem/B \
 **cf1915b:**   https://codeforces.com/contest/1915/problem/B \
 **cf1915d:**   https://codeforces.com/contest/1915/problem/D \
+**cf2132a:**   https://codeforces.com/contest/2132/problem/A \

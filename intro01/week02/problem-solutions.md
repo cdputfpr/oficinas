@@ -20,3 +20,6 @@ Inicializa uma matrix e um vetor de frequências, encontra a linha onde está o 
 
 **cf1915d**
 Itera na string e adiciona um ponto antes caso a_i seja consoante e a_{i+1} seja vogal, e não seja a primeira iteração
+
+**cf2132a**
+Percorre a string c. Se c_i for igual a 'D', adiciona b_i ao fim da string a. Se c_i for igual a 'V', adiciona b_i ao começo de a. Imprime a
