@@ -4,3 +4,4 @@
 **cf1915b:**   https://codeforces.com/contest/1915/problem/B \
 **cf1915d:**   https://codeforces.com/contest/1915/problem/D \
 **cf2132a:**   https://codeforces.com/contest/2132/problem/A \
+**cf2146a:**   https://codeforces.com/contest/2146/problem/A \
