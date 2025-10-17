@@ -23,3 +23,6 @@ Itera na string e adiciona um ponto antes caso a_i seja consoante e a_{i+1} seja
 
 **cf2132a**
 Percorre a string c. Se c_i for igual a 'D', adiciona b_i ao fim da string a. Se c_i for igual a 'V', adiciona b_i ao começo de a. Imprime a
+
+**cf2146**
+Conta a frequência de cada número. Itera na frequência f que todos os elementos terão na solução. Conta quantos elementos tem frequência maior ou igual a f. Seja k o resultado dessa contagem. A resposta é o máximo k\*f que você encontrar
