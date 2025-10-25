@@ -4,5 +4,9 @@ Bruta qual letra pode remover. Para cada uma, itera com dois ponteiros começand
 - Senão, se puder remover um, remove;
 - Senão, é impossível chegar num palíndromo com esta escolha.
 
-**cf2112a**
+REJEITADO **cf2112a**
 Bruta para todos os pontos entre 1 e 100. Para cada uma, verifica se a distância para x e para y é menor que a distância correspondente para a Alice
+
+**cf2060a**
+Bruta para todos os valores entre -100 e 100, intuitivo de pensar pois esses valores são restritos nos valores da soma de fibonacci no array original. 
+Para cada uma, verifica qual é o fibonacciness de cada array com o valor em a3

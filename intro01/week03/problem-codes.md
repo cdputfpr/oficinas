@@ -1,2 +1,3 @@
 **cf1582c:**   https://codeforces.com/contest/1582/problem/C \
-**cf2112a:**   https://codeforces.com/contest/2112/problem/A \
+REJEITADO **cf2112a:**   https://codeforces.com/contest/2112/problem/A \
+**cf2060a:**   https://codeforces.com/contest/2060/problem/A \
