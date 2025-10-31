@@ -22,3 +22,6 @@ Itera da direita para esquerda, guardando o mínimo encontrado até o momento. D
 
 **cf229a**
 Bruta qual coluna será transformada em '1's. Em cada linha, deslocamos sempre o '1' mais próximo para a coluna desejada. Para obter qual é o '1' mais próximo de modo eficiente, podemos, por exemplo, iterar com two pointers duas vezes sobre cada linha, uma para obter o mais próximo à esquerda e outra para o mais próximo à direita, guardando qual foi o último '1' encontrado.
+
+**cf2028a:**
+Simula os movimentos para um número suficientemente grande de iterações, por exemplo 100, e verifica se chega na posição (a,b). Se chegar "YES", senão "NO"
