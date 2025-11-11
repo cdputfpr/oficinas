@@ -10,3 +10,6 @@ Em cada query, a soma final do array será a soma de 1 até l-1, mais (r-l+1)* k
 
 **cf1615b:**
 A solução consiste em fazermos 20 prefix sums, um para cada bit da representação binária do valor máximo de r. o prefix sum i na posição j conta quantos elementos no array de 1 até j tem o bit i = 0. Assim, para cada caso de teste, podemos iterar sobre os bits e guardar a menor contagem naquele intervalo que foi passado, essa será a resposta.
+
+**cf1469b:**
+A ideia eh fazer um prefix sum do vetor n e do vetor m. A resposta sera a soma do maior valor em cada um dos respectivos prefix sums. Isso gera a resposta pois estamos pegar a maior soma possivel de cada um dos vetores.
