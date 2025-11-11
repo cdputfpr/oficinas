@@ -7,3 +7,6 @@ por máximo ou mínimo do outro intervalo não considerado. Apenas bruta essas 4
 
 **cf1807d:**
 Em cada query, a soma final do array será a soma de 1 até l-1, mais (r-l+1)* k mais a soma de r+1 até n. Isso pode ser calculado rapidamente com prefix sum.
+
+**cf1615b:**
+A solução consiste em fazermos 20 prefix sums, um para cada bit da representação binária do valor máximo de r. o prefix sum i na posição j conta quantos elementos no array de 1 até j tem o bit i = 0. Assim, para cada caso de teste, podemos iterar sobre os bits e guardar a menor contagem naquele intervalo que foi passado, essa será a resposta.
