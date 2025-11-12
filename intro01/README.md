@@ -1,14 +1,44 @@
-# Padrão
+# Manual das Oficinas Introdutórias do Clube de Programação
+
+## O que são as Oficinas Introdutórias
+As oficinas introdutórias são aulas ministradas pelo clube de programação com o
+objetivo de introduzir iniciantes à programação competitiva. Cada semana, dois
+integrantes da equipe de oficinas preparam uma aula de 50 minutos, e são selecionados
+de 5 a 8 problemas relacionados ao tópico da aula para compor a lista de exercícios que
+será feita pelos alunos, com o acompanhamento dos extensionistas do clube de
+programação.
+
+Na primeira edição, as aulas acontecem às sextas-feiras das 17:50 às 20:00.
+
+Esse repositório tem o objetivo de concentrar os materiais usados na aula, bem como os
+problemas selecionados para cada semana. Nas reuniões gerais do CDP, são selecionados
+os alunos que ofertarão as aulas da semana seguinte e os alunos que selecionarão os
+problemas para aquela semana. O prazo de publicação da prévia do conteúdo da aula é 9
+dias antes da aula, e o prazo para a seleção dos problemas é 2 dias antes da aula. No
+dia da oficina introdutória, o líder da equipe de oficinas deve criar o contest no
+codeforces com os problemas selecionados.
+
+Para selecionar um problema, o integrante da equipe de oficinas deve criar um Pull Request nesse repostório com:
+1. O código do problema com o link no arquivo problem-codes.md da respectiva semana
+2. Uma solução Accepted do problema no diretório solutions/. O nome do arquivo deve
+estar no formato **[código_do_problema]-[nome_de_quem_resolveu].cpp** (veja a seção abaixo para mais detalhes)
+3. Uma explicação escrita da solução no arquivo problem-solutions.md
+
+Então, o link do PR deve ser enviado no grupo de whatsapp de decisões da equipe de
+oficinas para que os demais integrantes revisem e aceitem o problema. Uma vez aceito, o PR será mergeado.
+
+A seguir, será explicado como o repositório está organizado.
 
 ## Diretório da Oficina Introdutória 01
 Os diretórios dessa sessão deverão ser da seguinte forma:
 
-**./week[número]**
+**./week[número]-[título]**
 
-em que 
+em que
 - **[número]** é um número inteiro que indica o índice da semana da oficina, sempre com dois dígitos
+- **[título]** é o título da aula da semana, com palavras separadas por underscore
 
-**Exemplo:** ./week03
+**Exemplo:** ./week03-complexity-and-brute_force
 
 Existirá também o arquivo $good-problems.md$ onde poderemos salvar problemas que não se encaixam exatamente em alguma semana, mas poderão ser úteis para outras semanas futuras.
 Os problemas devem ser salvos da seguinte forma:
@@ -17,7 +47,7 @@ Os problemas devem ser salvos da seguinte forma:
 
 As tags de conteúdo são poucas palavras descrevendo o tipo de algoritmo utilizado na solução. Alguns exemplos de tags são *bruteforce, grafos, muf/dsu, segtree*.
 
-## Para dentro do diretório
+## Dentro do diretório de cada semana
 
 Todos os diretórios de contests terão os seguintes arquivos:
 
@@ -43,7 +73,7 @@ AULA \
 Arquivo onde terão as soluções escritas dos problemas do arquivo *problem-codes.md*. Os problemas devem estar em mesma ordem do outro arquivo e devem ter a seguinte forma:
 
 ```
-\*\*[código_do_problema]\*\* 
+\*\*[código_do_problema]\*\*
 
 [solução_escrita]
 ```
@@ -64,7 +94,7 @@ Os arquivos de solução devem ter a seguinte nomenclatura:
 
 **[código_do_problema]-[nome_de_quem_resolveu].cpp**
 
-Lembremos de adequar as soluções para o nível do contest, ou seja, se o contest for introdutório, não utilizar soluções avançadas. 
+Lembremos de adequar as soluções para o nível do contest, ou seja, se o contest for introdutório, não utilizar soluções avançadas.
 
 Lembrar de deixar uma linha vazia ao final do arquivo.
 
