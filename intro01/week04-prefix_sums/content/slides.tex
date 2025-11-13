@@ -1,0 +1,300 @@
+\documentclass{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usefonttheme{professionalfonts}
+
+
+%\setbeamertemplate{footline}[frame number]
+\usepackage{minted}
+
+\title{Oficina Introdutória 4}
+\author{Gabriel Spadafora, Henrique Bubniak}
+
+\begin{document}
+
+
+\begin{frame}[c]
+\centering
+{\Huge \textcolor{blue!80!black}{Soma de Prefixos}} \\[1em]
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+% Primeiro Slide
+
+\begin{frame}{Apresentação do problema}
+  \centering
+  \includegraphics[width=0.5\textwidth]{img/example_vector.png} \\[0.5em]
+
+  \textbf{Pergunta:} Qual é a soma dos elementos do índice 2 até o índice 7?
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+% Segundo Slide
+
+\begin{frame}{Apresentação do problema}
+  \centering
+  \includegraphics[width=0.5\textwidth]{img/example_vector1.png} \\[0.5em]
+
+  \textbf{Pergunta:} Qual é a soma dos elementos do índice 2 até o índice 7?
+
+  \vspace{1em}
+
+  \begin{alertblock}{}
+    Qual a complexidade da solução?
+  \end{alertblock}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+% Terceiro Slide
+
+\begin{frame}{Solução força bruta}
+  \centering
+  \includegraphics[width=0.5\textwidth]{img/bad_vector.png} \\[0.5em]
+
+  \textbf{Pergunta:} Se eu quiser fazer Q perguntas do tipo "Qual a soma de $i$ até
+  $j$", qual é a complexidade total usando o algoritmo anterior?
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+% Quarto Slide
+
+\begin{frame}{Solução força bruta}
+  \centering
+  \includegraphics[width=0.5\textwidth]{img/bad_vector.png} \\[0.5em]
+
+  \textbf{Pergunta:} Se eu quiser fazer Q perguntas do tipo "Qual a soma de $i$ até
+  $j$", qual é a complexidade total usando o algoritmo anterior?
+
+  \textbf{Complexidade: $O(Q \cdot N)$}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+% Quinto Slide
+
+\begin{frame}{Motivação}
+  \textbf{Pergunta:} O problema Static Range Sum Queries passa usando essa solução?
+  \\
+    \centering
+  \includegraphics[width=0.7\textwidth]{img/cses.png} \\[0.5em]
+
+\end{frame}
+
+\begin{frame}{Motivação}
+  \begin{alertblock}{Não!}
+    \begin{itemize}
+      \item $N$ pode ser até $2 \times 10^5$
+      \item $Q$ pode ser até $2 \times 10^5$
+      \item Complexidade: $O(N \times Q) = O((2 \times 10^5) \times (2 \times 10^5)) = O(4 \times 10^{10})$
+      \item Um computador faz $\sim 10^8$ operações por segundo
+      \item Tempo: $\frac{4 \times 10^{10}}{10^8} = 400$ segundos!
+    \end{itemize}
+  \end{alertblock}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+% Sexto Slide
+
+\begin{frame}{Existe uma forma mais eficiente?}
+  \centering
+  {\Huge \textcolor{blue!80!black}{PREFIX SUM}} \\[2em]
+
+  \pause
+
+  \textbf{Vamos entender o conceito!}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+% Sétimo Slide
+
+\begin{frame}{Definições: Prefixo e Sufixo}
+  Dado um array de tamanho $n$:
+
+  \vspace{1em}
+
+  \begin{block}{Prefixo de tamanho $k$}
+    Os primeiros $k$ elementos do array
+  \end{block}
+
+  \vspace{0.5em}
+
+  \begin{block}{Sufixo de tamanho $k$}
+    Os últimos $k$ elementos do array
+  \end{block}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+% Oitavo Slide
+
+\begin{frame}{O que é Prefix Sum?}
+  \begin{block}{Definição}
+    Dado um array $a$ de tamanho $n$, a \textbf{soma de prefixos} (prefix sum) é um array $ps$ de tamanho $n+1$ onde:
+
+    \vspace{0.5em}
+
+    $ps[i]$ contém a soma dos elementos no prefixo de tamanho $i$ do array $a$
+  \end{block}
+
+  \vspace{1em}
+   % \centering
+  %\includegraphics[width=0.6\textwidth]{img/prefix.png} \\[0.5em]
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+% Nono Slide
+
+\begin{frame}{Exemplo Prático}
+  Seja $a = \{3, 10, 2, 1, 5, 4, 3\}$
+
+  \vspace{1em}
+
+  \pause
+
+  O array de prefix sum será:
+
+  \vspace{0.5em}
+
+  $ps = \{0, 3, 13, 15, 16, 21, 25, 28\}$
+
+  \vspace{1em}
+
+  \pause
+
+  \begin{itemize}
+    \item $ps[0] = 0$ (soma de 0 elementos)
+    \item $ps[1] = 3$ (soma de $a[1]$)
+    \item $ps[2] = 13$ (soma de $a[1] + a[2] = 3 + 10$)
+    \item $ps[3] = 15$ (soma de $a[1] + a[2] + a[3] = 3 + 10 + 2$)
+    \item ...
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+% Décimo Slide
+
+\begin{frame}{Como usar Prefix Sum para responder queries?}
+  \begin{block}{Propriedade importante}
+    A soma do array no intervalo $[l, r]$ é igual à soma do prefixo de tamanho $r$ menos a soma do prefixo de tamanho $l-1$:
+
+    \vspace{0.5em}
+
+    \centering
+    $\text{soma}[l, r] = ps[r] - ps[l-1]$
+  \end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+% Décimo Primeiro Slide
+
+\begin{frame}{Exemplo: Calculando soma $[3, 6]$}
+  Seja $a = \{3, 10, 2, 1, 5, 4, 3\}$ e $ps = \{0, 3, 13, 15, 16, 21, 25, 28\}$
+
+  \vspace{1em}
+
+  \textbf{Pergunta:} Qual é a soma dos elementos no intervalo $[3, 6]$?
+
+  \vspace{1em}
+  \pause
+
+  \textbf{Forma tradicional:}
+  $$a[3] + a[4] + a[5] + a[6] = 2 + 1 + 5 + 4 = 12$$
+
+  \vspace{0.5em}
+  \pause
+
+  \textbf{Usando prefix sum:}
+  $$ps[6] - ps[2] = 25 - 13 = 12$$
+
+  \vspace{0.5em}
+  \pause
+
+  \begin{alertblock}{}
+    Muito mais fácil! E em $O(1)$!
+  \end{alertblock}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+% Décimo Segundo Slide
+
+\begin{frame}{Complexidade da solução com Prefix Sum}
+  \textbf{Análise:}
+
+  \vspace{1em}
+
+  \begin{enumerate}
+    \item Pré-computação do prefix sum: $O(N)$
+    \pause
+    \item Cada query é respondida em: $O(1)$
+    \pause
+    \item Total para $Q$ queries: $O(N + Q)$
+  \end{enumerate}
+
+  \vspace{1em}
+  \pause
+
+  \begin{block}{Comparação}
+    \begin{itemize}
+      \item Solução anterior: $O(Q \times N) = O(4 \times 10^{10})$ (400 segundos)
+      \item Com Prefix Sum: $O(N + Q) = O(4 \times 10^5)$ (0.004 segundos)
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+% Décimo Terceiro Slide
+
+% Décimo Terceiro Slide
+\begin{frame}[fragile]{Como criar o Prefix Sum? (Código)}
+  \begin{minted}[fontsize=\small, linenos, autogobble]{cpp}
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+
+    // O vetor de prefix sum tem tamanho n+1
+    vector<int> prefix_sum(n + 1, 0);
+    for (int i = 1; i <= n; i++) {
+        // ps[i] = a[0] + ... + a[i-1]
+        prefix_sum[i] = a[i - 1] + prefix_sum[i - 1];
+    }
+  \end{minted}
+      \begin{alertblock}{Cuidado com Overflow!}
+    Se os valores do array forem grandes, a soma pode ultrapassar o limite de \texttt{int}. Use \texttt{long long} quando necessário!
+    \end{alertblock}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+% Décimo Quarto Slide
+
+\begin{frame}[fragile]{Como usar o Prefix Sum? (Código)}
+  \begin{minted}[fontsize=\small, linenos, autogobble]{cpp}
+    // l e r indexados em 1
+    int q;
+    cin >> q;
+    while (q--) {
+        int l, r;
+        cin >> l >> r;
+        cout << prefix_sum[r] - prefix_sum[l - 1] << "\n";
+    }
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}{Dúvidas}
+    \vfill % Empurra o conteúdo para o centro vertical
+    \centering % Centraliza horizontalmente
+    \textbf{\Huge Dúvidas?} % \Huge deixa a fonte bem grande
+    \vfill % Termina o preenchimento vertical
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
