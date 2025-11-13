@@ -15,3 +15,9 @@ Podemos criar dois vetores de prefix sum, onde um sera construido com o vetor or
 
 **cf102961j**
 Ordenamos as moedas em ordem crescente e iteramos. Quando encontrarmos uma moeda maior que 1 + a soma das anteriores, temos que a resposta é 1 + a soma das anteriores. Caso não encontremos, a resposta é 1 + a soma de todas as moedas.
+
+**cf1092b:** 
+Primeiro deve-se remover os pares, ficando só valores que não possuem um par. Assim, ordena-se e vai tirando a diferença dois a dois e printa essa diferença.
+
+**cf1792a:** 
+Inicialmente, a ideia de dar 1 de dano em dois inimigos só é booa quando se tem 1 vida. Caso contrário, se tiver +2 vidas, levaria 3 spells para matar, sendo que podemos matar com 1 para cada inimigo. Assim, ordena-se e depois procura o valor que muda de 2 para 3, ou seja, o primeiro 3. Assim, basta contar quantos inimigos com vida 1 possui. Assim, basta manter essa quantidade par (não faz diferença se pegar em outro), salvar a qtd_1 para o calculo. Divide por dois essa quantidade (uma magia para dois inimigos) e depois soma com o restante, que seria matar cada um individualmente.
