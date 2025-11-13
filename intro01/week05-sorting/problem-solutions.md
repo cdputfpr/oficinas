@@ -3,3 +3,6 @@ Vamos iterar no aluno a_i do maior pro menor. Inicialmente a_i vai ser alocado e
 
 **cf2149b**
 Podemos ordenar o array e definir os pares como os vizinhos no array ordenado. A resposta será a distância do maior par.
+
+**cf433b**
+Podemos criar dois vetores de prefix sum, onde um sera construido com o vetor original do exercicio e o outro sera construido apos ordenarmos o vetor original. Dessa forma, verificamos o tipo da questao que o exercicio pede e printamos o respectivo prefix sum no intervalo fornecido
