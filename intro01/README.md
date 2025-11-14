@@ -1,16 +1,16 @@
 # Manual das Oficinas Introdutórias do Clube de Programação
 
 ## O que são as Oficinas Introdutórias
-As oficinas introdutórias são aulas ministradas pelo clube de programação com o
-objetivo de introduzir iniciantes à programação competitiva. Cada semana, dois
+As Oficinas Introdutórias são aulas ministradas pelo Clube de Programação com o
+objetivo de introduzir iniciantes à Programação Esportiva. Cada semana, dois
 integrantes da equipe de oficinas preparam uma aula de 50 minutos, e são selecionados
 de 5 a 8 problemas relacionados ao tópico da aula para compor a lista de exercícios que
-será feita pelos alunos, com o acompanhamento dos extensionistas do clube de
-programação.
+será feita pelos alunos, com o acompanhamento dos extensionistas do Clube de
+Programação.
 
 Na primeira edição, as aulas acontecem às sextas-feiras das 17:50 às 20:00.
 
-Esse repositório tem o objetivo de concentrar os materiais usados na aula, bem como os
+Este repositório tem o objetivo de concentrar os materiais usados na aula, bem como os
 problemas selecionados para cada semana. Nas reuniões gerais do CDP, são selecionados
 os alunos que ofertarão as aulas da semana seguinte e os alunos que selecionarão os
 problemas para aquela semana. O prazo de publicação da prévia do conteúdo da aula é 9
@@ -18,7 +18,7 @@ dias antes da aula, e o prazo para a seleção dos problemas é 2 dias antes da 
 dia da oficina introdutória, o líder da equipe de oficinas deve criar o contest no
 codeforces com os problemas selecionados.
 
-Para selecionar um problema, o integrante da equipe de oficinas deve criar um Pull Request nesse repostório com:
+Para selecionar um problema, o integrante da equipe de oficinas deve criar um Pull Request neste repositório com:
 1. O código do problema com o link no arquivo problem-codes.md da respectiva semana
 2. Uma solução Accepted do problema no diretório solutions/. O nome do arquivo deve
 estar no formato **[código_do_problema]-[nome_de_quem_resolveu].cpp** (veja a seção abaixo para mais detalhes)
@@ -30,7 +30,7 @@ oficinas para que os demais integrantes revisem e aceitem o problema. Uma vez ac
 A seguir, será explicado como o repositório está organizado.
 
 ## Diretório da Oficina Introdutória 01
-Os diretórios dessa sessão deverão ser da seguinte forma:
+Os diretórios dessa seção deverão ser da seguinte forma:
 
 **./week[número]-[título]**
 
@@ -38,7 +38,7 @@ em que
 - **[número]** é um número inteiro que indica o índice da semana da oficina, sempre com dois dígitos
 - **[título]** é o título da aula da semana, com palavras separadas por underscore
 
-**Exemplo:** ./week03-complexity-and-brute_force
+**Exemplo:** ./week03-complexity_and_brute_force
 
 Existirá também o arquivo $good-problems.md$ onde poderemos salvar problemas que não se encaixam exatamente em alguma semana, mas poderão ser úteis para outras semanas futuras.
 Os problemas devem ser salvos da seguinte forma:
@@ -52,7 +52,7 @@ As tags de conteúdo são poucas palavras descrevendo o tipo de algoritmo utiliz
 Todos os diretórios de contests terão os seguintes arquivos:
 
 ### problem-codes.md
-Arquivo onde terão todos os problemas do contest, escritos em linhas diferentes, sempre identando com alinhamento dos links e em sequência esperada para o contest real, da seguinte forma:
+Arquivo onde terão todos os problemas do contest, escritos em linhas diferentes, sempre indentando com alinhamento dos links e em sequência esperada para o contest real, da seguinte forma:
 
 **\*\*[código_do_problema]:\*\* [link_do_problema]** \
 
