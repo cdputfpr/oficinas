@@ -1,0 +1,1 @@
+**cf978c:**    https://codeforces.com/problemset/problem/978/C \

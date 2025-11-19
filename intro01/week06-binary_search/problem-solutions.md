@@ -1,0 +1,2 @@
+**cf978c:**
+Basicamente é necessário realizar um Prefix Sum em O(n) do vetor inteiro, depois realizar uma busca binária de cada valor nesse vetor de soma. A ideia é salvar todos os valores de M (média = r+l) quando for buscar à direita, pois ao final (quando não tiver mais nada), teremos o maior valor não maior que o m. Por fim, basta retornar a posição desse quarto, e para quantificar as salas dele de fato (um dos requisitos do output), pegamos a diferença entre ele e o anterior.
